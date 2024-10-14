@@ -1,0 +1,8 @@
+opencv-python-headless
+torch
+torchvision
+scipy
+munkres
+huggingface_hub
+yolov5 
+azure-cosmos #might require you to install it locally or through a different source if it doesn't exist in PyPI
