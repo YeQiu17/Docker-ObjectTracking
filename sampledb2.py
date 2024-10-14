@@ -34,17 +34,17 @@ class Object:
         self.feature = np.mean(self.feature_history, axis=0)
 
     def is_fully_visible(self, frame_width, frame_height):
-        """Check if the object is fully visible in the frame."""    
+        """Check if the object is fully visible in the frame."""
         xmin, ymin, xmax, ymax = self.pos
         return xmin >= 0 and ymin >= 0 and xmax <= frame_width and ymax <= frame_height
 
 
 # Model paths
-yolo_model_path = 'yolov5s.pt'
-reid_model_path = 'osnet_x1_0_market_256x128_amsgrad_ep150_stp60_lr0.0015_b64_fb10_softmax_labelsmooth_flip.pth'
-# video_capture_list = ['cam-1M.mp4', 'cam-2M.mp4']
+yolo_model_path = 'models/yolov5s.pt'
+reid_model_path = 'models/osnet_x1_0_market_256x128_amsgrad_ep150_stp60_lr0.0015_b64_fb10_softmax_labelsmooth_flip.pth'
+video_capture_list = ['cam-1M.mp4', 'cam-2M.mp4']
 # video_capture_list = [r'rtsp://yectra:Yectra123@192.168.1.59:554/stream1']
-video_capture_list = ['campus4-c0.mp4', 'campus4-c1.mp4', 'campus4-c2.mp4']
+# video_capture_list = ['campus4-c0.mp4', 'campus4-c1.mp4', 'campus4-c2.mp4']
 # video_capture_list = ['video5.mp4']
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
